@@ -5,6 +5,7 @@ import com.solvd.hospital.exception.AgeException;
 import com.solvd.hospital.exception.FirstNameException;
 import com.solvd.hospital.exception.LastNameException;
 import com.solvd.hospital.model.Patient;
+import com.solvd.hospital.model.Person;
 import com.solvd.hospital.specialty.Neurologist;
 import com.solvd.hospital.specialty.Specialist;
 import com.solvd.hospital.specialty.Surgeon;

@@ -5,8 +5,8 @@ import com.solvd.hospital.exception.FirstNameException;
 import com.solvd.hospital.exception.LastNameException;
 
 public class Therapist extends Specialist implements IMetting {
-    public Therapist(String firstName, String lastName, int age, int salary, int yearsOfExperience) throws LastNameException, FirstNameException, AgeException {
-        super(firstName, lastName, age, salary, yearsOfExperience);
+    public Therapist(String firstName, String lastName, int age, int salary, int yearsOfExperience, String login, String password) throws LastNameException, FirstNameException, AgeException {
+        super(firstName, lastName, age, salary, yearsOfExperience, login, password);
     }
 
     @Override

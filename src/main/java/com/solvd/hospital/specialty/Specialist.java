@@ -16,12 +16,14 @@ public abstract class Specialist extends Person implements IContact {
     private int salary;
     private int yearsOfExperience;
 
-    public Specialist(String firstName, String lastName, int age, int salary, int yearsOfExperience) throws FirstNameException, LastNameException, AgeException {
+    public Specialist(String firstName, String lastName, int age, int salary, int yearsOfExperience, String login, String password) throws FirstNameException, LastNameException, AgeException {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setAge(age);
         this.salary = salary;
         this.yearsOfExperience = yearsOfExperience;
+        this.setPassword(password);
+        this.setLogin(login);
         logger.info("Specialist created: " + this.toString());
     }
 

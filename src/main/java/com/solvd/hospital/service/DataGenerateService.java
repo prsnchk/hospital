@@ -24,9 +24,9 @@ public class DataGenerateService {
     public ArrayList<Patient> dataGeneratePatients() throws LastNameException, FirstNameException, AgeException {
         ArrayList<Patient> patients = new ArrayList<>();
 
-        Patient tokio = new Patient("Silena", "Olivera", 29, "08.12.2022");
-        Patient professor = new Patient("Serhio", "Martines", 32, "09.12.2022");
-        Patient berlin = new Patient("Pablo", "Kalderon", 32, "10.12.2022");
+        Patient tokio = new Patient("Silena", "Olivera", 29, "08.12.2022", "tokio", "1111");
+        Patient professor = new Patient("Serhio", "Martines", 32, "09.12.2022", "professor", "2222");
+        Patient berlin = new Patient("Pablo", "Kalderon", 32, "10.12.2022", "berlin", "3333");
 
         patients.add(tokio);
         patients.add(professor);
@@ -40,13 +40,13 @@ public class DataGenerateService {
     public HashMap<Patient, Record> dataGenerateRecords() throws LastNameException, FirstNameException, AgeException {
         HashMap<Patient, Record> recordHashMap = new HashMap<>();
 
-        Patient tokio = new Patient("Silena","Olivera",29,"08.12.2022");
-        Patient professor = new Patient("Serhio","Martines", 32, "09.12.2022");
-        Patient berlin = new Patient("Pablo","Kalderon", 32,"10.12.2022");
+        Patient tokio = new Patient("Silena","Olivera",29,"08.12.2022","tokio", "1111");
+        Patient professor = new Patient("Serhio","Martines", 32, "09.12.2022", "professor", "2222");
+        Patient berlin = new Patient("Pablo","Kalderon", 32,"10.12.2022", "berlin", "3333");
 
-        Neurologist neurologist = new Neurologist("Monika","Gastambide",40, 1500, 10);
-        Therapist therapist = new Therapist("Arturito","Aroman", 45, 1500, 20);
-        Surgeon surgeon = new Surgeon("Rokel", "Muril", 50, 2000, 30);
+        Neurologist neurologist = new Neurologist("Monika","Gastambide",40, 1500, 10, "neurologist1", "4444");
+        Therapist therapist = new Therapist("Arturito","Aroman", 45, 1500, 20,"therapist1", "5555");
+        Surgeon surgeon = new Surgeon("Rokel", "Muril", 50, 2000, 30, "surgeon1", "6666");
 
         Record record1 = new Record("27.11.2022", neurologist.getFullName(), "Patient still alive...");
         Record record2 = new Record("28.11.2022", therapist.getFullName(), "Chikibomboni...");
@@ -64,9 +64,9 @@ public class DataGenerateService {
     public HashSet<Specialist> dataGenerateSpecialists() throws LastNameException, FirstNameException, AgeException {
         HashSet<Specialist> specialists = new HashSet<>();
 
-        Neurologist neurologist = new Neurologist("Monika", "Gastambide", 40, 1500, 10);
-        Therapist therapist = new Therapist("Arturito", "Aroman", 45, 1500, 20);
-        Surgeon surgeon = new Surgeon("Rokel", "Muril", 50, 2000, 30);
+        Neurologist neurologist = new Neurologist("Monika","Gastambide",40, 1500, 10, "neurologist1", "4444");
+        Therapist therapist = new Therapist("Arturito","Aroman", 45, 1500, 20,"therapist1", "5555");
+        Surgeon surgeon = new Surgeon("Rokel", "Muril", 50, 2000, 30, "surgeon1", "6666");
 
 
         specialists.add(neurologist);

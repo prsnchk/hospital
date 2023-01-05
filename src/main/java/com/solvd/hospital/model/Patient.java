@@ -17,36 +17,17 @@ public final class Patient extends Person implements IContact {
 
     public Patient(){}
 
-    public Patient(String firstName, String lastName, int age, String dateOfRegistration) throws FirstNameException, LastNameException, AgeException {
+    public Patient(String firstName, String lastName, int age, String dateOfRegistration, String login, String password) throws FirstNameException, LastNameException, AgeException {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setAge(age);
+        this.setPassword(password);
+        this.setLogin(login);
         this.dateOfRegistration = dateOfRegistration;
         logger.info("Patient created: " + this.toString());
     }
 
-    public Patient createPatientFromConsole() throws FirstNameException, LastNameException {
-        logger.info("Start reading from console: ");
 
-        Patient consolePatient = new Patient();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter patients first name");
-        consolePatient.setFirstName(scanner.nextLine());
-        System.out.println("Enter patients last name");
-        consolePatient.setLastName(scanner.nextLine());
-        System.out.println("Enter age");
-        try {
-            consolePatient.setAge(Integer.parseInt(scanner.nextLine()));
-        } catch (AgeException e) {
-            System.out.println("Incorrect Age!");
-            logger.error(e);
-        }
-        System.out.println("Enter date of registration");
-        consolePatient.setDateOfRegistration(scanner.nextLine());
-
-        logger.info(consolePatient);
-        return consolePatient;
-    }
 
     public String getDateOfRegistration() {
         return dateOfRegistration;
@@ -85,7 +66,7 @@ public final class Patient extends Person implements IContact {
 
     @Override
     public String toString(){
-        return "Name: " + this.getFirstName() + " " + this.getLastName()+ " Age: " + this.getAge() + " Date Of Registration: " + this.getDateOfRegistration();
+        return "Login: " + this.getLogin() + " " + "Password: " + this.getHidePassword() + " " + "Name: " + this.getFirstName() + " " + this.getLastName()+ " Age: " + this.getAge() + " Date Of Registration: " + this.getDateOfRegistration();
     }
 
     @Override
